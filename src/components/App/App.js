@@ -17,10 +17,10 @@ class App extends Component{
     }
   }
 
-  startGame = (numTiles) => {
+  startGame = () => {
     this.setState((state) => ({
       ...state,
-      tiles: createTiles(numTiles),
+      tiles: createTiles(state.numTiles),
       playing: true, 
       previousTileIndex: null, 
       toBeCleared: null
